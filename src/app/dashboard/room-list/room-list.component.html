@@ -1,0 +1,7 @@
+<div>
+    <!-- <a routerLinkActive="active" (click)="navigateToRoomDetail(room.id)">{{room.name}}</a> -->
+    <a  *ngFor="let room of roomList"
+        class="d-flex d-flex-column"
+        [routerLink]="[{outlets: {detail: ['room-detail', room.id]}}]"
+        routerLinkActive="active current-active-link">{{room.name}}</a>
+</div>

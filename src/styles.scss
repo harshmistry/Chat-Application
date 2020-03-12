@@ -1,0 +1,114 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/styles/variables';
+
+html, body {
+    height: 100%;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:disabled,
+.btn-primary:active,
+.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: $primary;
+    border-color: $primary;
+}
+
+.btn-primary:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus {
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: $primary;
+    box-shadow: none;
+}
+
+.h-100px {
+    height: 100px;
+}
+
+.p-20px {
+    padding: 20px;
+}
+
+.max-width-40 {
+    max-width: 40%;
+}
+
+.overflow-y {
+    overflow-y: auto;
+}
+
+app-dashboard {
+    .dashboard-left-panel {
+        width: 250px;
+        background-color: $primary;
+        color: $white;
+    }
+}
+
+app-room-list {
+    .current-active-link {
+        background-color: darken($primary, 10%);
+    }
+
+    a, a:hover {
+        text-decoration: none;
+        color: $white;
+        padding: 10px 20px;
+    }
+
+    a:hover {
+        @extend .current-active-link
+    }
+}
+
+app-room-info {
+    .current-user {
+        color: $primary;
+    }
+}
+
+app-message-list {
+    .message-bubble {
+        display: inline-block;
+        position: relative;
+        height: auto;
+        background-color: $white;
+        border-radius: 50px;
+        max-width: 30%;
+    }
+
+    .message-bubble-from-self {
+        background-color: $primary !important;
+        color: $white;
+        max-width: 100% !important;
+    }
+
+    .message-bubble-text {
+        padding: 10px 25px;
+        text-align: left;
+        line-height: 1.5em;
+        p {
+            /* remove webkit p margins */
+            -webkit-margin-before: 0em;
+            -webkit-margin-after: 0em;
+            margin: 0;
+            // break long words (without space) to fit inside bubble
+            word-break: break-all;
+            padding-right: 10px;
+        }
+    }
+
+    .bubble-reaction {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .reaction-image {
+        width: 30px;
+        height: 30px;
+    }
+}
+

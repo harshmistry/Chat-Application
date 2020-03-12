@@ -1,0 +1,19 @@
+
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+    <div class="login-container">
+        <div class="login-form">
+            <div class="form-group">
+                <input  type="text" 
+                        class="form-control" 
+                        autofocus
+                        formControlName="userName">
+            </div>
+            <button type="submit" 
+                    class="btn btn-primary btn-lg btn-block"                
+                    [disabled]="!loginForm.valid">
+                Join the DoorDash Chat!
+            </button>
+        </div>
+    </div>
+</form>
+

@@ -1,0 +1,10 @@
+<div class="d-flex flex-column justify-content-between h-100">
+    <div class="p-20px h-100 message-list-wrapper overflow-y">
+        <app-message-list   [messageAdditionSubject]="messageAdditionSubject"
+                            [userName]="currentUserName"></app-message-list>
+    </div>
+    <div class="p-20px message-action-wrapper">
+        <app-message-action [messageAdditionSubject]="messageAdditionSubject"
+                            [userName]="currentUserName"></app-message-action>
+    </div>
+</div>

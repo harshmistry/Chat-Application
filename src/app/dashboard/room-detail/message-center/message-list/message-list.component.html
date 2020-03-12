@@ -1,0 +1,22 @@
+<div *ngIf="messageList && messageList.length > 0" class="d-flex flex-column">
+    <div *ngFor="let message of messageList;index as i"
+        [id]="message.id"
+        [ngClass]="{'mb-3': (i < messageList.length-1),
+                    'align-self-end max-width-40': (userName === message.name)}">
+        <div class="message-bubble"
+            [class.message-bubble-from-self]="userName === message.name">
+            <div class="message-bubble-text bubble-reaction">                
+                <p>{{message.message}}</p>
+                <div>
+                    <div *ngIf="!message.reaction" 
+                        (click)="addReaction(message, 'addReaction')">add</div>
+                    <img *ngIf="message.reaction"
+                        class="reaction-image" 
+                        [src]="'/assets/reactions/'+ message.reaction"
+                        (click)="addReaction(message, null)">
+                </div>
+            </div>
+        </div>
+        <div *ngIf="userName !== message.name">{{message.name}}</div>
+    </div>
+</div>

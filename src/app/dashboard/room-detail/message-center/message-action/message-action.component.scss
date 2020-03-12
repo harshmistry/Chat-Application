@@ -1,0 +1,6 @@
+.submit-button-style {
+    font-weight: bold;
+    &:not(:disabled) {
+        color: lighten(blue, 20%);
+    }
+}

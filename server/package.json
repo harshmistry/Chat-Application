@@ -1,7 +1,7 @@
 {
   "name": "frontend-project",
   "version": "1.0.0",
-  "description": "The Frontend take home project for DoorDash",
+  "description": "Server for Chat application",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,11 +11,10 @@
   "engines": {
     "node": ">=7.0.0"
   },
-  "author": "Ryan Gonzalez",
   "license": "ISC",
   "devDependencies": {
-    "serve": "^3.1.0",
-    "express": "~4.0.0",
+    "serve": "11.3.0",
+    "express": "4.17.1",
     "body-parser": "~1.0.1"
   },
   "dependencies": {

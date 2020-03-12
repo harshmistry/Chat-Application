@@ -1,4 +1,4 @@
-# DoorDash take away ChatApplication
+# Chat Application using Angular 8
 
 This project also includes corresponding server project. Run following steps for starting localhost
 
